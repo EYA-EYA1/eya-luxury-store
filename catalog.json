@@ -1,0 +1,306 @@
+[
+ {
+  "name": "Ruby Crystal Necklace Set",
+  "category": "Jewelry",
+  "price_cents": 8900,
+  "stock": 12,
+  "description": "Necklace and drop earrings with red crystals in gold-tone metal. Fashion jewelry.",
+  "image": "/img/1.jpg",
+  "fr": {
+   "name": "Parure collier et boucles cristal rubis",
+   "description": "Collier et pendants d'oreilles en cristaux rouges, métal doré. Bijoux fantaisie."
+  },
+  "ar": {
+   "name": "طقم عقد وأقراط بكريستال أحمر",
+   "description": "عقد وأقراط متدلية بكريستال أحمر على معدن بلون الذهب. مجوهرات أزياء."
+  }
+ },
+ {
+  "name": "Gold Stacking Rings",
+  "category": "Jewelry",
+  "price_cents": 5400,
+  "stock": 6,
+  "description": "A set of gold-tone rings, some set with green or clear crystals. Fashion jewelry.",
+  "image": "/img/2.jpg",
+  "fr": {
+   "name": "Bagues dorées à superposer",
+   "description": "Ensemble de bagues dorées, certaines serties de cristaux verts ou transparents. Bijoux fantaisie."
+  },
+  "ar": {
+   "name": "خواتم ذهبية للتراص",
+   "description": "مجموعة خواتم بلون الذهب، بعضها بكريستال أخضر أو شفاف. مجوهرات أزياء."
+  }
+ },
+ {
+  "name": "Pearl and Crystal Earrings",
+  "category": "Jewelry",
+  "price_cents": 4800,
+  "stock": 10,
+  "description": "Glass pearl and crystal drop earrings. Fashion jewelry.",
+  "image": "/img/3.jpg",
+  "fr": {
+   "name": "Boucles d'oreilles perles et cristal",
+   "description": "Pendants d'oreilles en perles de verre et cristal. Bijoux fantaisie."
+  },
+  "ar": {
+   "name": "أقراط لؤلؤ وكريستال",
+   "description": "أقراط متدلية من لؤلؤ زجاجي وكريستال. مجوهرات أزياء."
+  }
+ },
+ {
+  "name": "Gold Bangle Stack",
+  "category": "Jewelry",
+  "price_cents": 6800,
+  "stock": 8,
+  "description": "Slim gold-tone bangles and a charm bracelet. Fashion jewelry.",
+  "image": "/img/4.jpg",
+  "fr": {
+   "name": "Ensemble de bracelets dorés",
+   "description": "Joncs fins dorés et un bracelet à breloques. Bijoux fantaisie."
+  },
+  "ar": {
+   "name": "مجموعة أساور ذهبية",
+   "description": "أساور رفيعة بلون الذهب وسوار بتمائم. مجوهرات أزياء."
+  }
+ },
+ {
+  "name": "Gold-Tone Bracelet Watch",
+  "category": "Jewelry",
+  "price_cents": 11900,
+  "stock": 5,
+  "description": "Square dial on a gold-tone bracelet strap.",
+  "image": "/img/5.jpg",
+  "fr": {
+   "name": "Montre bracelet dorée",
+   "description": "Cadran carré sur un bracelet doré."
+  },
+  "ar": {
+   "name": "ساعة سوار ذهبية",
+   "description": "واجهة مربعة على سوار بلون الذهب."
+  }
+ },
+ {
+  "name": "Station Chain Necklace",
+  "category": "Jewelry",
+  "price_cents": 7600,
+  "stock": 7,
+  "description": "Long gold-tone chain with black and white charms. Fashion jewelry.",
+  "image": "/img/6.jpg",
+  "fr": {
+   "name": "Collier chaîne longue",
+   "description": "Longue chaîne dorée ornée de breloques noires et blanches. Bijoux fantaisie."
+  },
+  "ar": {
+   "name": "عقد سلسلة طويلة",
+   "description": "سلسلة طويلة بلون الذهب بتمائم سوداء وبيضاء. مجوهرات أزياء."
+  }
+ },
+ {
+  "name": "Layered Pendant Necklaces",
+  "category": "Jewelry",
+  "price_cents": 8400,
+  "stock": 9,
+  "description": "Fine gold-tone chains with pendants, made to be worn together. Fashion jewelry.",
+  "image": "/img/7.jpg",
+  "fr": {
+   "name": "Colliers pendentifs superposés",
+   "description": "Fines chaînes dorées à pendentifs, à porter ensemble. Bijoux fantaisie."
+  },
+  "ar": {
+   "name": "عقود متدرجة بقلادات",
+   "description": "سلاسل رفيعة بلون الذهب بقلادات للارتداء معًا. مجوهرات أزياء."
+  }
+ },
+ {
+  "name": "Gold Earring Collection",
+  "category": "Jewelry",
+  "price_cents": 5200,
+  "stock": 15,
+  "description": "A tray of gold-tone and crystal earrings in several styles. Fashion jewelry.",
+  "image": "/img/8.jpg",
+  "fr": {
+   "name": "Collection de boucles d'oreilles dorées",
+   "description": "Un plateau de boucles dorées et cristal en plusieurs styles. Bijoux fantaisie."
+  },
+  "ar": {
+   "name": "مجموعة أقراط ذهبية",
+   "description": "صينية أقراط بلون الذهب والكريستال بعدة تصاميم. مجوهرات أزياء."
+  }
+ },
+ {
+  "name": "Royal Jewelry Collection",
+  "category": "Jewelry",
+  "price_cents": 24900,
+  "stock": 3,
+  "description": "A crown, pearl strands and jeweled brooches on red velvet. Costume pieces.",
+  "image": "/img/9.jpg",
+  "fr": {
+   "name": "Collection de bijoux royaux",
+   "description": "Une couronne, des rangs de perles et des broches ornées sur velours rouge. Pièces de costume."
+  },
+  "ar": {
+   "name": "مجموعة المجوهرات الملكية",
+   "description": "تاج وعقود لؤلؤ وبروشات مرصعة على مخمل أحمر. قطع تمثيلية."
+  }
+ },
+ {
+  "name": "Gold Charm Jewelry Tray",
+  "category": "Jewelry",
+  "price_cents": 9800,
+  "stock": 6,
+  "description": "Bracelets, necklaces and charms in a velvet-lined tray. Fashion jewelry.",
+  "image": "/img/10.jpg",
+  "fr": {
+   "name": "Plateau de bijoux dorés à breloques",
+   "description": "Bracelets, colliers et breloques dans un écrin de velours. Bijoux fantaisie."
+  },
+  "ar": {
+   "name": "صينية مجوهرات بتمائم ذهبية",
+   "description": "أساور وعقود وتمائم في صينية مبطنة بالمخمل. مجوهرات أزياء."
+  }
+ },
+ {
+  "name": "Green and Red Crystal Gold Set",
+  "category": "Jewelry",
+  "price_cents": 15900,
+  "stock": 4,
+  "description": "Ornate gold-tone necklaces and drops set with green and red crystals. Fashion jewelry.",
+  "image": "/img/11.jpg",
+  "fr": {
+   "name": "Parure dorée cristaux verts et rouges",
+   "description": "Colliers et pendants dorés ornés de cristaux verts et rouges. Bijoux fantaisie."
+  },
+  "ar": {
+   "name": "طقم ذهبي بكريستال أخضر وأحمر",
+   "description": "عقود وقلادات مزخرفة بلون الذهب بكريستال أخضر وأحمر. مجوهرات أزياء."
+  }
+ },
+ {
+  "name": "Gold-Tone Watch Collection",
+  "category": "Accessories",
+  "price_cents": 18900,
+  "stock": 5,
+  "description": "Six watches with gold-tone and two-tone bracelets.",
+  "image": "/img/12.jpg",
+  "fr": {
+   "name": "Collection de montres dorées",
+   "description": "Six montres à bracelets dorés ou bicolores."
+  },
+  "ar": {
+   "name": "مجموعة ساعات ذهبية",
+   "description": "ست ساعات بأساور ذهبية أو بلونين."
+  }
+ },
+ {
+  "name": "Structured Black Handbag",
+  "category": "Bags",
+  "price_cents": 15900,
+  "stock": 5,
+  "description": "Black top-handle handbag, shown with a printed silk scarf on the handle.",
+  "image": "/img/13.jpg",
+  "fr": {
+   "name": "Sac à main noir structuré",
+   "description": "Sac noir à anse, présenté avec un foulard imprimé noué sur l'anse."
+  },
+  "ar": {
+   "name": "حقيبة يد سوداء منظمة",
+   "description": "حقيبة سوداء بمقبض علوي، تظهر مع وشاح مطبوع على المقبض."
+  }
+ },
+ {
+  "name": "Chain-Print Silk Scarf",
+  "category": "Accessories",
+  "price_cents": 4800,
+  "stock": 18,
+  "description": "Square scarf with a black, ivory and gold chain print.",
+  "image": "/img/14.jpg",
+  "fr": {
+   "name": "Foulard imprimé chaînes",
+   "description": "Foulard carré à motif de chaînes noir, ivoire et or."
+  },
+  "ar": {
+   "name": "وشاح بنقشة السلاسل",
+   "description": "وشاح مربع بنقشة سلاسل سوداء وعاجية وذهبية."
+  }
+ },
+ {
+  "name": "Classic Acetate Sunglasses",
+  "category": "Accessories",
+  "price_cents": 6200,
+  "stock": 14,
+  "description": "Black acetate frames with dark lenses.",
+  "image": "/img/15.jpg",
+  "fr": {
+   "name": "Lunettes de soleil classiques",
+   "description": "Montures noires en acétate et verres foncés."
+  },
+  "ar": {
+   "name": "نظارات شمسية كلاسيكية",
+   "description": "إطارات أسيتات سوداء وعدسات داكنة."
+  }
+ },
+ {
+  "name": "Top-Handle Handbag Collection",
+  "category": "Bags",
+  "price_cents": 17900,
+  "stock": 6,
+  "description": "Handbags shown in cream, tan and black. Colour is not selectable yet.",
+  "image": "/img/16.jpg",
+  "fr": {
+   "name": "Collection de sacs à main",
+   "description": "Sacs présentés en crème, beige et noir. Le choix de couleur n'est pas encore disponible."
+  },
+  "ar": {
+   "name": "مجموعة حقائب يد",
+   "description": "حقائب بألوان كريمي وبني فاتح وأسود. اختيار اللون غير متاح بعد."
+  }
+ },
+ {
+  "name": "Crystal Vanity Tray Set",
+  "category": "Accessories",
+  "price_cents": 8800,
+  "stock": 7,
+  "description": "Mirrored tray with a hand mirror and decorative keepsake boxes.",
+  "image": "/img/17.jpg",
+  "fr": {
+   "name": "Plateau de coiffeuse en cristal",
+   "description": "Plateau miroir avec miroir à main et boîtes décoratives."
+  },
+  "ar": {
+   "name": "طقم صينية زينة بلورية",
+   "description": "صينية مرآة مع مرآة يد وعلب زينة."
+  }
+ },
+ {
+  "name": "Embroidered Robe Collection",
+  "category": "Fashion",
+  "price_cents": 21900,
+  "stock": 4,
+  "description": "Long robes with gold embroidery in jewel colours.",
+  "image": "/img/18.jpg",
+  "fr": {
+   "name": "Collection de robes brodées",
+   "description": "Longues robes aux broderies dorées, aux teintes de pierres précieuses."
+  },
+  "ar": {
+   "name": "مجموعة أردية مطرزة",
+   "description": "أردية طويلة بتطريز ذهبي بألوان الجواهر."
+  }
+ },
+ {
+  "name": "Embroidered Evening Gowns",
+  "category": "Fashion",
+  "price_cents": 14900,
+  "stock": 4,
+  "description": "Floor-length gowns in black, ruby and ivory with gold detail.",
+  "image": "/img/19.jpg",
+  "fr": {
+   "name": "Robes de soirée brodées",
+   "description": "Robes longues noires, rubis et ivoire aux détails dorés."
+  },
+  "ar": {
+   "name": "فساتين سهرة مطرزة",
+   "description": "فساتين طويلة بالأسود والأحمر والعاجي بتفاصيل ذهبية."
+  }
+ }
+]

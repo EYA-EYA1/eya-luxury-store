@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en" dir="ltr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EYA | Luxury Beyond Beauty</title>
+<meta name="description" content="EYA — Luxury Beyond Beauty. An immersive luxury boutique concept.">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600&family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ivory:#FBF5E9;--stone:#E9DDC8;--green:#302116;--green2:#56391F;--gold:#C49A54;--ink:#241B15;--mute:#786957;--line:#E1CFB2}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ivory);color:var(--ink);font:16px/1.65 Jost,"Helvetica Neue",Arial,sans-serif}
+html[lang=ar] body{font-family:Cairo,Tahoma,Arial,sans-serif}
+h1,h2,h3,.brand{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;margin:0;line-height:1.08}
+html[lang=ar] h1,html[lang=ar] h2,html[lang=ar] h3,html[lang=ar] .brand{font-family:Amiri,"Times New Roman",serif}
+button,input,select{font:inherit;color:inherit}img{max-width:100%}:focus-visible{outline:2px solid var(--gold);outline-offset:3px}[hidden]{display:none!important}
+.top{background:#302116;color:#F8E9C8;text-align:center;font-size:.82rem;padding:7px 12px}
+header{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 5vw;background:#F6F1E7ee;backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.brand{font-size:1.9rem;letter-spacing:.28em;color:var(--green);text-decoration:none;display:flex;flex-direction:column;align-items:center;line-height:.9;gap:5px}.brand .crown{font-family:Georgia,serif;font-size:.72em;letter-spacing:0;color:var(--gold);line-height:1;text-shadow:0 1px 0 #fff2}
+nav.links{display:flex;gap:26px}nav.links a{color:var(--ink);text-decoration:none;font-size:.92rem;letter-spacing:.06em}nav.links a:hover{color:var(--gold)}
+.tools{display:flex;gap:6px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+.btn{display:inline-block;background:transparent;border:1px solid var(--green);color:var(--green);border-radius:999px;padding:7px 18px;cursor:pointer;text-decoration:none;font-size:.92rem;transition:.25s}
+.btn:hover{background:var(--green);color:var(--ivory)}.btn.solid{background:var(--green);color:var(--ivory)}.btn.solid:hover{background:var(--green2)}.btn.sm{padding:5px 14px;font-size:.84rem}.btn.gold{border-color:var(--gold);color:var(--ivory);background:transparent}.btn.gold:hover{background:var(--gold)}
+#langs{display:flex;gap:2px}#langs button{border:0;background:none;cursor:pointer;padding:4px 7px;color:var(--mute);font-size:.84rem}#langs button[aria-pressed=true]{color:var(--green);font-weight:600;border-bottom:1px solid var(--gold)}
+.hero{display:grid;grid-template-columns:1.05fr 1fr;gap:5vw;align-items:center;padding:7vh 6vw 9vh;min-height:78vh}
+.eyebrow{color:var(--gold);letter-spacing:.28em;font-size:.76rem;text-transform:uppercase;margin:0 0 14px}html[lang=ar] .eyebrow{letter-spacing:0;font-size:.9rem}
+.hero h1{font-size:clamp(2.8rem,6.4vw,5.6rem);color:var(--green)}.hero p.lead{color:var(--mute);font-size:1.12rem;max-width:44ch;margin:22px 0 30px}.hero .cta{display:flex;gap:12px;flex-wrap:wrap}
+.arches{position:relative;height:min(68vh,560px)}.arch{border-radius:999px 999px 0 0;overflow:hidden;background:var(--stone);box-shadow:0 20px 50px #14352b26}.arch img{width:100%;height:100%;object-fit:cover;display:block}
+.a1{position:absolute;inset:0 30% 0 0}.a2{position:absolute;right:0;bottom:-4%;width:46%;height:56%;border:8px solid var(--ivory)}
+section{padding:90px 6vw}.sec-h{text-align:center;margin-bottom:46px}.sec-h h2{font-size:clamp(2rem,4vw,3.2rem);color:var(--green)}
+.cols{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;max-width:1100px;margin:0 auto}
+.col{text-align:center;cursor:pointer;background:none;border:0;padding:0}.col .arch{height:380px;transition:transform .5s}.col:hover .arch{transform:translateY(-6px)}.col h3{font-size:1.7rem;margin:18px 0 4px;color:var(--green)}.col span{color:var(--gold);font-size:.88rem;letter-spacing:.1em}
+.atelier{background:var(--green);color:var(--ivory);display:grid;grid-template-columns:1fr 1fr;gap:4vw;align-items:center}.atelier h2{font-size:clamp(2rem,4vw,3.2rem)}.atelier p{color:#cfd8cf;max-width:46ch}
+#viewer{width:100%;height:min(54vh,460px);cursor:grab;touch-action:pan-y;border-radius:8px;background:radial-gradient(circle at 50% 45%,#6b4a28,#1c140d)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:0 0 18px}.chip{border:1px solid var(--line);background:transparent;border-radius:999px;padding:6px 18px;cursor:pointer}.chip[aria-pressed=true]{background:var(--green);color:var(--ivory);border-color:var(--green)}
+.bar{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:34px}input,select{background:#fff;border:1px solid var(--line);border-radius:8px;padding:9px 12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:34px 26px;max-width:1300px;margin:0 auto}
+.card h3{font-size:1.35rem;margin:14px 0 2px}.card .cat{margin:0 0 8px;color:var(--mute);font-size:.82rem;letter-spacing:.1em;text-transform:uppercase}.row{display:flex;justify-content:space-between;align-items:center;gap:8px}.price{font-weight:500}
+.ph{position:relative;aspect-ratio:4/5;background:var(--stone);overflow:hidden}.im{display:block;width:100%;height:100%;padding:0;border:0;cursor:pointer;background:none}.im img{width:100%;height:100%;object-fit:cover;transition:transform .6s}.im:hover img{transform:scale(1.05)}
+.heart{position:absolute;top:10px;inset-inline-end:10px;width:36px;height:36px;border-radius:50%;border:0;background:#F6F1E7e6;cursor:pointer;font-size:1.1rem;color:var(--green)}
+.tag{position:absolute;top:10px;inset-inline-start:10px;background:var(--green);color:var(--ivory);font-size:.74rem;padding:3px 10px;letter-spacing:.06em}
+.story{display:grid;grid-template-columns:1fr 1fr;gap:5vw;align-items:center;max-width:1200px;margin:0 auto}.story img{width:100%;display:block;border-radius:2px}.story h2{font-size:clamp(2rem,3.6vw,3rem);color:var(--green)}.story p{color:var(--mute)}
+footer{background:var(--green);color:#cfd8cf;padding:46px 6vw;text-align:center;font-size:.9rem}footer .brand{color:var(--ivory);font-size:1.6rem}
+dialog{background:#fff;color:var(--ink);border:1px solid var(--line);border-radius:10px;width:min(560px,94vw);padding:24px;max-height:92vh;overflow:auto}dialog::backdrop{background:#241b1599}
+form{display:grid;gap:10px}.err{color:#a3321f;min-height:1.2em;margin:0}.line{display:flex;justify-content:space-between;gap:8px;padding:8px 0;border-bottom:1px solid var(--line)}
+table{width:100%;border-collapse:collapse}td,th{padding:6px;text-align:start;border-bottom:1px solid var(--line)}.wrap{overflow-x:auto}.empty{color:var(--mute)}.lnk{background:none;border:0;border-bottom:1px solid currentColor;padding:0;cursor:pointer;color:var(--mute)}
+.pm img{width:100%;max-height:300px;object-fit:contain;background:var(--stone);margin-bottom:12px}
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .8s,transform .8s}.js .rv.in{opacity:1;transform:none}
+.hero{position:relative;isolation:isolate;background:radial-gradient(ellipse at 78% 40%,#D9B77935,transparent 48%),linear-gradient(115deg,#FBF5E9 0%,#F4E6D0 100%)}
+.hero:after{content:"";position:absolute;inset:18px 3vw;z-index:-1;border:1px solid #C49A5440;pointer-events:none}
+.col .arch{box-shadow:0 18px 38px #5D3D1D20}.col:hover .arch{transform:translateY(-8px) scale(1.012);box-shadow:0 25px 48px #5D3D1D35}
+.btn,.chip{transition:transform .25s ease,background .25s ease,color .25s ease,border-color .25s ease}.btn:hover{transform:translateY(-2px)}
+@media(max-width:860px){nav.links{display:none}.hero,.atelier,.story{grid-template-columns:1fr}.arches{height:420px}.cols{grid-template-columns:1fr}.col .arch{height:300px}section{padding:64px 6vw}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.js .rv{opacity:1;transform:none;transition:none}.im img,.col .arch{transition:none}}
+</style><link rel="stylesheet" href="/assets/palace.css?v=3"></head><body>
+<header><a class="brand" href="#top"><span class="crown" aria-hidden="true">♛</span><span>EYA</span></a>
+<nav class="links" aria-label="Main"><a href="#collections" data-i18n="nav_col"></a><a href="#atelier" data-i18n="nav_atelier"></a><a href="#shop" data-i18n="nav_shop"></a><a href="#story" data-i18n="nav_story"></a></nav>
+<div class="tools"><div id="langs" role="group" aria-label="Language"><button data-l="en" aria-pressed="true">EN</button><button data-l="fr" aria-pressed="false">FR</button><button data-l="ar" aria-pressed="false">AR</button></div>
+<button class="btn sm" id="bWish">&#9825; 0</button><button class="btn sm" id="bAcc" data-i18n="login"></button><button class="btn sm" id="bOrd" hidden>My orders</button><button class="btn sm" id="bAdm" hidden>Admin</button><button class="btn sm solid" id="bCart">Cart (0)</button></div></header>
+<main id="top">
+<section class="palace" id="palaceSec" aria-label="EYA virtual palace">
+<canvas id="palace" aria-hidden="true"></canvas><div class="palace-fb" id="palaceFb"></div>
+<div class="palace-ui"><div class="plogo"><span class="pcrown" aria-hidden="true"><svg viewBox="0 0 64 36" width="64" height="36"><path d="M4 32 L8 10 L20 21 L32 4 L44 21 L56 10 L60 32 Z" fill="none" stroke="#E2C27D" stroke-width="2.4" stroke-linejoin="round"/><circle cx="8" cy="8" r="2.6" fill="#E2C27D"/><circle cx="32" cy="2.6" r="2.6" fill="#E2C27D"/><circle cx="56" cy="8" r="2.6" fill="#E2C27D"/></svg></span><h1>EYA</h1><p class="ptag">Luxury Beyond Beauty</p></div>
+<div class="pcta"><a class="btn gold solid" href="#shop">Enter the collections</a><button class="btn gold" id="pTour" type="button">Explore the palace</button></div>
+<div class="pdoors" role="group" aria-label="Boutiques"><button type="button" data-door="0">Jewelry</button><button type="button" data-door="1">Bags</button><button type="button" data-door="2">Accessories</button><button type="button" data-door="3">Fashion</button></div>
+<p class="phint" id="pHint">Drag to look around · arrow keys or buttons to walk · click a doorway to enter</p></div></section>
+<section id="collections"><div class="sec-h rv"><p class="eyebrow" data-i18n="col_eyebrow"></p><h2 data-i18n="col_title"></h2></div>
+<div class="bts"><button class="bt rv" data-shop="Jewelry"><img src="/img/boutique_jewelry.jpg" alt="Jewelry boutique with a gold chandelier and oval display cases" loading="lazy"><span class="btx"><h3 data-i18n="Jewelry"></h3><small data-i18n="bt_j"></small></span></button>
+<button class="bt rv" id="btSkin" type="button"><img src="/img/boutique_skincare.jpg" alt="Skincare boutique with illuminated arched shelves" loading="lazy"><span class="btx"><h3 data-i18n="Skincare"></h3><small data-i18n="bt_s"></small></span></button>
+<button class="bt rv" data-shop="Bags"><img src="/img/boutique_bags.jpg" alt="Handbag boutique with marble shelves and a crystal chandelier" loading="lazy"><span class="btx"><h3 data-i18n="Bags"></h3><small data-i18n="bt_b"></small></span></button>
+<button class="bt rv" data-shop="Accessories"><img src="/img/12.jpg" alt="Watches and accessories" loading="lazy"><span class="btx"><h3 data-i18n="Accessories"></h3><small data-i18n="bt_a"></small></span></button>
+<button class="bt rv" data-shop="Fashion"><img src="/img/boutique_fashion.jpg" alt="Fashion boutique with velvet seating" loading="lazy"><span class="btx"><h3 data-i18n="Fashion"></h3><small data-i18n="bt_f"></small></span></button></div></section>
+<section class="atelier" id="atelier"><div class="rv"><p class="eyebrow" data-i18n="at_eyebrow"></p><h2 data-i18n="at_title"></h2><p data-i18n="at_text"></p><p class="empty" data-i18n="at_hint"></p></div><canvas id="viewer" class="rv" role="img" aria-label="Interactive 3D ring"></canvas></section>
+<section id="shop"><div class="sec-h rv"><p class="eyebrow" data-i18n="shop_eyebrow"></p><h2 data-i18n="shop_title"></h2></div>
+<div class="chips" id="cats" role="group" aria-label="Category"><button class="chip" aria-pressed="true" data-cat="" data-i18n="all"></button><button class="chip" aria-pressed="false" data-cat="Jewelry" data-i18n="Jewelry"></button><button class="chip" aria-pressed="false" data-cat="Bags" data-i18n="Bags"></button><button class="chip" aria-pressed="false" data-cat="Accessories" data-i18n="Accessories"></button><button class="chip" aria-pressed="false" data-cat="Fashion" data-i18n="Fashion"></button></div>
+<div class="bar"><input id="q" type="search" data-ph="search" aria-label="Search"><select id="sort" aria-label="Sort"><option value="" data-i18n="featured"></option><option value="price_asc" data-i18n="price_asc"></option><option value="price_desc" data-i18n="price_desc"></option><option value="name" data-i18n="byname"></option></select></div>
+<div class="grid" id="grid" aria-live="polite"></div></section>
+<section id="story"><div class="story"><img class="rv" src="/img/palace_stairs.jpg" alt="Grand marble staircase with gold balustrades"><div class="rv"><p class="eyebrow" data-i18n="st_eyebrow"></p><h2 data-i18n="st_title"></h2><p data-i18n="st_text"></p></div></div></section></main>
+<footer><div class="brand"><span class="crown" aria-hidden="true">♛</span><span>EYA</span></div><p data-i18n="footer"></p></footer>
+<dialog id="dProd"><div id="pBody" class="pm"></div><button class="btn sm" data-close data-i18n="close"></button></dialog>
+<dialog id="dCart"><h2 data-i18n="cart_title"></h2><div id="cartBody"></div><p class="err" id="eCart"></p>
+<form id="fOut"><input name="name" data-ph="f_name" required autocomplete="name"><input name="email" type="email" data-ph="f_email" required autocomplete="email"><input name="address" data-ph="f_addr" required autocomplete="street-address">
+<small class="empty" data-i18n="demo"></small><div class="row"><button type="button" class="btn sm" data-close data-i18n="keep"></button><button class="btn sm solid" data-i18n="place"></button></div></form></dialog>
+<dialog id="dAcc"><div class="lamp" aria-hidden="true"></div><h2 id="tAcc">Log in</h2><form id="fAcc"><input name="name" placeholder="Name" autocomplete="name" hidden><input name="email" type="email" placeholder="Email" required autocomplete="email"><input name="password" type="password" placeholder="Password (8+ characters)" required autocomplete="current-password">
+<p class="err" id="eAcc"></p><div class="row"><button type="button" class="btn sm" id="swAcc">Create an account</button><button class="btn sm solid">Continue</button></div></form><button class="btn sm" id="bOut" hidden>Log out</button> <button class="btn sm" data-close>Close</button></dialog>
+<dialog id="dInfo"><h2 id="tInfo"></h2><div id="info" class="wrap"></div><button class="btn sm" data-close>Close</button></dialog>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script defer src="/assets/palace.js?v=3"></script>
+<script defer src="/assets/assistant.js?v=3"></script>
+<script>
+document.documentElement.classList.add("js");
+const $=s=>document.querySelector(s),money=c=>"$"+(c/100).toFixed(2);
+const esc=s=>String(s).replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));
+async function api(p,method="GET",data){const r=await fetch("/api/"+p,{method,headers:{"Content-Type":"application/json"},body:data?JSON.stringify(data):undefined});
+ const j=await r.json().catch(()=>({}));if(!r.ok)throw new Error(j.error||"Something went wrong.");return j}
+const L={
+en:{nav_col:"Collections",nav_atelier:"Atelier 3D",nav_shop:"Shop",nav_story:"Our story",login:"Log in",cart:"Cart",
+ hero_eyebrow:"A palace of beauty, jewelry and style",hero_title:"Enter your world of luxury.",hero_text:"Discover radiant jewelry, exquisite bags and beauty rituals in a boutique inspired by golden palaces and ivory marble.",hero_cta1:"Shop the collection",hero_cta2:"See it in 3D",
+ col_eyebrow:"Discover",col_title:"Our collections",discover:"DISCOVER",Jewelry:"Jewelry",Accessories:"Accessories",Bags:"Bags",Skincare:"Skincare",bt_j:"Timeless elegance",bt_s:"Opening soon",bt_b:"Structured, timeless, yours",bt_a:"The details that complete you",bt_f:"Embroidered evening elegance",sk_t:"Skincare boutique",sk_x:"Our skincare and fragrance boutiques are opening soon. Browse Jewelry, Bags, Accessories and Fashion in the meantime.",Fashion:"Fashion",
+ at_eyebrow:"Interactive",at_title:"The atelier in 3D",at_text:"A gold ring set with a crystal, built live in 3D. Turn it to see how light moves across the metal.",at_hint:"Drag to rotate.",
+ shop_eyebrow:"The collection",shop_title:"Discover EYA",all:"All",search:"Search",featured:"Featured",price_asc:"Price: low to high",price_desc:"Price: high to low",byname:"Name",
+ st_eyebrow:"The EYA experience",st_title:"Luxury, imagined as a palace",st_text:"EYA brings together the glow of gold, the softness of ivory marble and the feeling of discovering a private luxury boutique.",
+ footer:"© EYA — Luxury Beyond Beauty",
+ add:"Add to cart",added:"Added",sold:"Sold out",few:"Only {n} left",save:"Save",saved:"Saved",qty:"Quantity",instock:"{n} in stock",close:"Close",none:"No products match your search.",wish:"Wishlist",wish_empty:"Nothing saved yet. Open a product and choose Save.",
+ cart_title:"Your cart",total:"Total",empty:"Your cart is empty.",keep:"Keep shopping",place:"Place demo order",demo:"Demo store: no real payment is taken.",f_name:"Full name",f_email:"Email",f_addr:"Shipping address",ordered:"Demo order #{n} saved. Total {m}. Nothing was charged or shipped.",ship:"Shipping and returns: demo store, nothing is shipped."},
+fr:{nav_col:"Collections",nav_atelier:"Atelier 3D",nav_shop:"Boutique",nav_story:"Notre histoire",login:"Connexion",cart:"Panier",
+ hero_eyebrow:"Bijoux, accessoires et mode",hero_title:"Des trésors dignes d'un palais.",hero_text:"Des pièces choisies pour leur or, leurs couleurs et leur lumière, inspirées des intérieurs des palais ottomans.",hero_cta1:"Voir la collection",hero_cta2:"Découvrir en 3D",
+ col_eyebrow:"Découvrir",col_title:"Nos collections",discover:"DÉCOUVRIR",Jewelry:"Bijoux",Accessories:"Accessoires",Bags:"Sacs",Skincare:"Soins",bt_j:"Élégance intemporelle",bt_s:"Bientôt disponible",bt_b:"Structuré, intemporel, à vous",bt_a:"Les détails qui vous complètent",bt_f:"Élégance du soir brodée",sk_t:"Boutique soins",sk_x:"Nos boutiques de soins et de parfums ouvrent bientôt. Découvrez en attendant les bijoux, sacs, accessoires et la mode.",Fashion:"Mode",
+ at_eyebrow:"Interactif",at_title:"L'atelier en 3D",at_text:"Une bague dorée sertie d'un cristal, modélisée en 3D en direct. Tournez-la pour voir la lumière glisser sur le métal.",at_hint:"Faites glisser pour tourner.",
+ shop_eyebrow:"La collection",shop_title:"Découvrir EYA",all:"Tout",search:"Rechercher",featured:"Sélection",price_asc:"Prix croissant",price_desc:"Prix décroissant",byname:"Nom",
+ st_eyebrow:"Notre histoire",st_title:"Inspirée par la splendeur des palais ottomans",st_text:"EYA réunit l'éclat de l'or, la douceur du marbre ivoire et le plaisir de découvrir une boutique de luxe privée.",
+ footer:"© EYA — Luxury Beyond Beauty",
+ add:"Ajouter au panier",added:"Ajouté",sold:"Épuisé",few:"Plus que {n}",save:"Enregistrer",saved:"Enregistré",qty:"Quantité",instock:"{n} en stock",close:"Fermer",none:"Aucun produit ne correspond.",wish:"Favoris",wish_empty:"Rien d'enregistré. Ouvrez un produit et choisissez Enregistrer.",
+ cart_title:"Votre panier",total:"Total",empty:"Votre panier est vide.",keep:"Continuer",place:"Valider la commande démo",demo:"Boutique de démonstration : aucun paiement réel.",f_name:"Nom complet",f_email:"E-mail",f_addr:"Adresse de livraison",ordered:"Commande démo n°{n} enregistrée. Total {m}. Rien n'a été débité ni expédié.",ship:"Livraison et retours : boutique de démonstration, rien n'est expédié."},
+ar:{nav_col:"المجموعات",nav_atelier:"الورشة ثلاثية الأبعاد",nav_shop:"المتجر",nav_story:"قصتنا",login:"تسجيل الدخول",cart:"السلة",
+ hero_eyebrow:"مجوهرات وإكسسوارات وأزياء",hero_title:"كنوز تليق بالقصور.",hero_text:"قطع اخترناها لذهبها وألوانها وضوئها، مستوحاة من داخل القصور العثمانية.",hero_cta1:"تسوّق المجموعة",hero_cta2:"شاهدها بالـ3D",
+ col_eyebrow:"اكتشف",col_title:"مجموعاتنا",discover:"اكتشف",Jewelry:"المجوهرات",Accessories:"الإكسسوارات",Bags:"الحقائب",Skincare:"العناية بالبشرة",bt_j:"أناقة خالدة",bt_s:"قريباً",bt_b:"أنيقة وخالدة وتخصّك",bt_a:"تفاصيل تكمل إطلالتك",bt_f:"أناقة السهرة المطرزة",sk_t:"بوتيك العناية بالبشرة",sk_x:"سيتم افتتاح بوتيك العناية بالبشرة والعطور قريباً. تصفحوا في الأثناء المجوهرات والحقائب والإكسسوارات والأزياء.",Fashion:"الأزياء",
+ at_eyebrow:"تفاعلي",at_title:"الورشة بالـ3D",at_text:"خاتم ذهبي بحجر كريستال، مبني بالـ3D مباشرة. أدِره لترى كيف يتحرك الضوء على المعدن.",at_hint:"اسحب للتدوير.",
+ shop_eyebrow:"المجموعة",shop_title:"اكتشفي EYA",all:"الكل",search:"بحث",featured:"المختارة",price_asc:"السعر: من الأقل",price_desc:"السعر: من الأعلى",byname:"الاسم",
+ st_eyebrow:"تجربة EYA",st_title:"الفخامة كما لو كانت قصرًا",st_text:"تجمع EYA بين بريق الذهب ونعومة الرخام العاجي وإحساس اكتشاف بوتيك فاخر خاص.",
+ footer:"© EYA — Luxury Beyond Beauty",
+ add:"أضف إلى السلة",added:"تمت الإضافة",sold:"نفد",few:"بقي {n} فقط",save:"حفظ",saved:"تم الحفظ",qty:"الكمية",instock:"{n} متوفر",close:"إغلاق",none:"لا توجد منتجات مطابقة.",wish:"المفضلة",wish_empty:"لا شيء محفوظ بعد. افتح منتجًا واختر حفظ.",
+ cart_title:"سلتك",total:"المجموع",empty:"سلتك فارغة.",keep:"متابعة التسوق",place:"تأكيد الطلب التجريبي",demo:"متجر تجريبي: لا يتم أي دفع حقيقي.",f_name:"الاسم الكامل",f_email:"البريد الإلكتروني",f_addr:"عنوان الشحن",ordered:"تم حفظ الطلب التجريبي رقم {n}. المجموع {m}. لم يُخصم أي مبلغ ولم يُشحن شيء.",ship:"الشحن والإرجاع: متجر تجريبي، لا يُشحن شيء."}};
+let lang="en";try{lang=localStorage.getItem("aurelle_lang")||"en"}catch(e){}if(!L[lang])lang="en";
+const t=(k,n,m)=>String(L[lang][k]??L.en[k]??k).replace("{n}",n).replace("{m}",m);
+const nm=p=>p["name_"+lang]||p.name,ds=p=>p["desc_"+lang]||p.description;
+let user=null,cart={items:[],total_cents:0},reg=false,ALL=[],cat="";
+function applyLang(){document.documentElement.lang=lang;document.documentElement.dir=lang==="ar"?"rtl":"ltr";
+ document.querySelectorAll("[data-i18n]").forEach(e=>e.textContent=t(e.dataset.i18n));document.querySelectorAll("[data-ph]").forEach(e=>e.placeholder=t(e.dataset.ph));
+ document.querySelectorAll("#langs button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.l===lang));try{localStorage.setItem("aurelle_lang",lang)}catch(e){}
+ renderCart();setUser(user)}
+$("#langs").onclick=e=>{const l=e.target.dataset.l;if(l){lang=l;applyLang();loadProducts()}};
+document.querySelectorAll("[data-close]").forEach(b=>b.onclick=()=>b.closest("dialog").close());
+const wl={get(){try{return JSON.parse(localStorage.getItem("aurelle_wish")||"[]")}catch(e){return[]}},set(a){try{localStorage.setItem("aurelle_wish",JSON.stringify(a))}catch(e){}},
+ toggle(id){let a=this.get();a=a.includes(id)?a.filter(x=>x!=id):[...a,id];this.set(a);this.paint();return a.includes(id)},paint(){$("#bWish").textContent="\u2661 "+this.get().length}};wl.paint();
+$("#bWish").onclick=()=>{const a=wl.get().map(id=>ALL.find(p=>p.id==id)).filter(Boolean);showInfo(t("wish"),a.length?a.map(p=>`<div class="line"><button class="lnk" data-open="${p.id}">${esc(nm(p))}</button><span>${money(p.price_cents)}</span></div>`).join(""):`<p class="empty">${t("wish_empty")}</p>`)};
+async function addToCart(id,n=1){const have=cart.items.find(i=>i.product_id==id);cart=await api("cart","POST",{product_id:+id,qty:Math.min(10,(have?have.qty:0)+n)});renderCart()}
+function openProd(id){const p=ALL.find(x=>x.id==id);if(!p)return;const saved=wl.get().includes(p.id);
+ $("#pBody").innerHTML=`${p.image?`<img src="${esc(p.image)}" alt="${esc(nm(p))}">`:""}<h2>${esc(nm(p))}</h2><p>${esc(ds(p))}</p><p class="price">${money(p.price_cents)} <span class="empty">${p.stock?t("instock",p.stock):t("sold")}</span></p><p class="empty">${t("ship")}</p>
+ <div class="row"><label>${t("qty")} <select id="pq">${[1,2,3,4,5].map(n=>`<option>${n}</option>`).join("")}</select></label><button class="btn sm" id="pw">${saved?t("saved"):t("save")}</button>${p.stock?`<button class="btn sm solid" id="pa">${t("add")}</button>`:""}</div><p class="err" id="pe"></p>`;
+ $("#pw").onclick=e=>{e.target.textContent=wl.toggle(p.id)?t("saved"):t("save");loadProducts()};
+ if($("#pa"))$("#pa").onclick=async()=>{try{await addToCart(p.id,+$("#pq").value);$("#pa").textContent=t("added")}catch(x){$("#pe").textContent=x.message}};$("#dProd").showModal()}
+document.addEventListener("click",e=>{const b=e.target.closest("[data-open]");if(b){$("#dInfo").close();openProd(+b.dataset.open)}const s=e.target.closest("[data-shop]");if(s){setCat(s.dataset.shop);$("#shop").scrollIntoView()}});
+function setCat(c){cat=c;document.querySelectorAll("#cats .chip").forEach(b=>b.setAttribute("aria-pressed",b.dataset.cat===c));loadProducts()}
+$("#cats").onclick=e=>{if(e.target.dataset.cat!==undefined)setCat(e.target.dataset.cat)};
+const io="IntersectionObserver"in window?new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}}),{threshold:.12}):null;
+const reveal=()=>document.querySelectorAll(".rv:not(.in)").forEach(e=>io?io.observe(e):e.classList.add("in"));
+async function loadProducts(){const u=new URLSearchParams({q:$("#q").value,category:cat,sort:$("#sort").value});
+ try{const ps=await api("products?"+u),w=wl.get();$("#grid").innerHTML=ps.length?ps.map(p=>`<article class="card rv"><div class="ph"><button class="im" data-open="${p.id}" aria-label="${esc(nm(p))}"><img loading="lazy" src="${esc(p.image||"")}" alt="${esc(nm(p))}"></button>
+ <button class="heart" data-wish="${p.id}" aria-pressed="${w.includes(p.id)}" aria-label="${t("save")}">${w.includes(p.id)?"\u2665":"\u2661"}</button>${!p.stock?`<span class="tag">${t("sold")}</span>`:p.stock<=5?`<span class="tag">${t("few",p.stock)}</span>`:""}</div>
+ <h3>${esc(nm(p))}</h3><p class="cat">${t(p.category)}</p><div class="row"><span class="price">${money(p.price_cents)}</span>${p.stock?`<button class="btn sm" data-add="${p.id}">${t("add")}</button>`:""}</div></article>`).join(""):`<p class="empty">${t("none")}</p>`;reveal()}
+ catch(e){$("#grid").innerHTML=`<p class="err">${esc(e.message)}</p>`}}
+$("#grid").onclick=async e=>{const a=e.target.closest("[data-add]"),h=e.target.closest("[data-wish]");
+ if(a){try{await addToCart(a.dataset.add);a.textContent=t("added")}catch(x){alert(x.message)}}
+ if(h){const on=wl.toggle(+h.dataset.wish);h.textContent=on?"\u2665":"\u2661";h.setAttribute("aria-pressed",on)}};
+["q","sort"].forEach(i=>$("#"+i).oninput=loadProducts);
+function renderCart(){const n=cart.items.reduce((a,i)=>a+i.qty,0);$("#bCart").textContent=`${t("cart")} (${n})`;
+ $("#cartBody").innerHTML=cart.items.length?cart.items.map(i=>{const p=ALL.find(x=>x.id==i.product_id);return`<div class="line"><span>${esc(p?nm(p):i.name)}</span><span><button class="btn sm" data-q="${i.product_id}:${i.qty-1}" aria-label="-">-</button> ${i.qty} <button class="btn sm" data-q="${i.product_id}:${Math.min(10,i.qty+1)}" aria-label="+">+</button> ${money(i.unit_price_cents*i.qty)}</span></div>`}).join("")+`<div class="line"><b>${t("total")}</b><b>${money(cart.total_cents)}</b></div>`:`<p class="empty">${t("empty")}</p>`;
+ $("#fOut").hidden=!cart.items.length}
+$("#cartBody").onclick=async e=>{const q=e.target.dataset.q;if(!q)return;const[p,n]=q.split(":");cart=await api("cart","POST",{product_id:+p,qty:+n});renderCart()};
+$("#bCart").onclick=()=>{$("#eCart").textContent="";renderCart();$("#dCart").showModal()};
+$("#fOut").onsubmit=async e=>{e.preventDefault();try{const o=await api("checkout","POST",Object.fromEntries(new FormData(e.target)));
+ cart={items:[],total_cents:0};renderCart();e.target.reset();$("#cartBody").innerHTML=`<p>${t("ordered",o.order_id,money(o.total_cents))}</p>`;$("#fOut").hidden=true;loadProducts()}
+ catch(x){$("#eCart").textContent=x.message}};
+function setUser(u){user=u;$("#bAcc").textContent=u?u.name:t("login");$("#bOrd").hidden=!u;$("#bAdm").hidden=!(u&&u.role==="admin")}
+function accMode(r){reg=r;$("#tAcc").textContent=r?"Create account":"Log in";$("#fAcc [name=name]").hidden=!r;$("#fAcc [name=name]").required=r;$("#swAcc").textContent=r?"I have an account":"Create an account"}
+$("#bAcc").onclick=()=>{$("#eAcc").textContent="";accMode(false);$("#fAcc").hidden=!!user;$("#bOut").hidden=!user;$("#dAcc").showModal()};
+$("#swAcc").onclick=()=>accMode(!reg);
+$("#fAcc").onsubmit=async e=>{e.preventDefault();try{setUser(await api(reg?"register":"login","POST",Object.fromEntries(new FormData(e.target))));$("#dAcc").close()}catch(x){$("#eAcc").textContent=x.message}};
+$("#bOut").onclick=async()=>{await api("logout","POST",{});setUser(null);cart={items:[],total_cents:0};renderCart();$("#dAcc").close()};
+function showInfo(t,h){$("#tInfo").textContent=t;$("#info").innerHTML=h;$("#dInfo").showModal()}
+const ordTable=(os,adm)=>os.length?`<table><tr><th>#</th><th>Items</th><th>Total</th><th>Status</th></tr>${os.map(o=>`<tr><td>${o.id}</td><td>${o.items.map(i=>esc(i.name)+" x"+i.qty).join(", ")}</td><td>${money(o.total_cents)}</td><td>${adm?`<select data-st="${o.id}">${["pending","paid","shipped","cancelled"].map(s=>`<option ${s==o.status?"selected":""}>${s}</option>`).join("")}</select>`:esc(o.status)}</td></tr>`).join("")}</table>`:`<p class="empty">No orders yet.</p>`;
+$("#bOrd").onclick=async()=>showInfo("My orders",ordTable(await api("orders")));
+$("#bAdm").onclick=async()=>{const [os,ps]=await Promise.all([api("admin/orders"),api("products")]);
+ showInfo("Admin",`<h3>Orders</h3>${ordTable(os,true)}<h3>Products</h3><table><tr><th>Name</th><th>Price (cents)</th><th>Stock</th><th></th></tr>${ps.map(p=>`<tr><td>${esc(p.name)}</td><td><input size="6" id="pr${p.id}" value="${p.price_cents}"></td><td><input size="4" id="st${p.id}" value="${p.stock}"></td><td><button class="btn" data-sv="${p.id}">Save</button></td></tr>`).join("")}</table>`)};
+$("#info").onchange=async e=>{if(e.target.dataset.st)await api("admin/orders/"+e.target.dataset.st,"PATCH",{status:e.target.value})};
+$("#info").onclick=async e=>{const id=e.target.dataset.sv;if(!id)return;try{await api("admin/products/"+id,"PATCH",{price_cents:+$("#pr"+id).value,stock:+$("#st"+id).value});e.target.textContent="Saved";loadProducts()}catch(x){alert(x.message)}};
+// ---------- 3D atelier: a gold ring with a crystal ----------
+(function(){const T=THREE,cv=$("#viewer");let r=null;try{r=new T.WebGLRenderer({canvas:cv,antialias:true,alpha:true})}catch(e){}if(!r||!window.THREE){cv.hidden=true;return}
+ r.toneMapping=T.ACESFilmicToneMapping;r.outputEncoding=T.sRGBEncoding;const s=new T.Scene(),cam=new T.PerspectiveCamera(36,1,.1,50);cam.position.set(0,.8,7.2);
+ const e=new T.Scene();e.add(new T.Mesh(new T.BoxGeometry(30,30,30),new T.MeshBasicMaterial({color:0x3a4a40,side:T.BackSide})));
+ [[18,3,0,12,0,Math.PI/2,0],[2,16,-13,0,0,0,Math.PI/2],[2,16,13,0,3,0,Math.PI/2],[14,2,0,2,-13,0,0]].forEach(a=>{const m=new T.Mesh(new T.PlaneGeometry(a[0],a[1]),new T.MeshBasicMaterial({color:new T.Color(6,5.4,4.4),side:T.DoubleSide}));m.position.set(a[2],a[3],a[4]);m.rotation.set(a[5],a[6],0);e.add(m)});
+ const pm=new T.PMREMGenerator(r),env=pm.fromScene(e,.02).texture;pm.dispose();s.environment=env;
+ const gold=new T.MeshStandardMaterial({color:0xd9b46a,metalness:1,roughness:.18,envMap:env}),gem=new T.MeshStandardMaterial({color:0xf6fbff,metalness:.15,roughness:.02,flatShading:true,envMap:env,transparent:true,opacity:.92});
+ const ring=new T.Group();ring.add(new T.Mesh(new T.TorusGeometry(1.4,.17,32,120),gold));
+ const g=new T.Group(),cr=new T.Mesh(new T.CylinderGeometry(.62,.95,.42,8),gem),pv=new T.Mesh(new T.ConeGeometry(.95,.95,8),gem);pv.rotation.x=Math.PI;pv.position.y=-.68;g.add(cr,pv);g.position.y=2.2;g.scale.setScalar(.82);ring.add(g);
+ [-.55,.55].forEach(x=>{const p=new T.Mesh(new T.SphereGeometry(.09,16,12),gold);p.position.set(x,1.98,0);ring.add(p)});ring.rotation.x=.25;s.add(ring);
+ let drag=null,ry=0,vis=false;const still=matchMedia("(prefers-reduced-motion:reduce)").matches;
+ cv.addEventListener("pointerdown",ev=>{drag=ev.clientX;try{cv.setPointerCapture(ev.pointerId)}catch(x){}cv.style.cursor="grabbing"});cv.addEventListener("pointerup",()=>{drag=null;cv.style.cursor="grab"});cv.addEventListener("pointermove",ev=>{if(drag!==null){ry+=(ev.clientX-drag)*.012;drag=ev.clientX}});
+ if(io!==null&&"IntersectionObserver"in window)new IntersectionObserver(a=>vis=a[0].isIntersecting).observe(cv);else vis=true;
+ const size=()=>{r.setPixelRatio(Math.min(devicePixelRatio,2));r.setSize(cv.clientWidth,cv.clientHeight,false);cam.aspect=cv.clientWidth/cv.clientHeight;cam.updateProjectionMatrix()};size();addEventListener("resize",size);
+ (function loop(){if(vis){if(!still&&drag===null)ry+=.018;ring.rotation.y=ry;r.render(s,cam)}requestAnimationFrame(loop)})();
+})();
+(async()=>{applyLang();setUser(await api("me").catch(()=>null));cart=await api("cart").catch(()=>cart);ALL=await api("products").catch(()=>[]);renderCart();loadProducts();reveal()})();
+</script></body></html>
